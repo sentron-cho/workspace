@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+</head>
+
+<!-- 
+  flex-flow
+	  flex-direction	Items의 주 축(main-axis)을 row로 설정	
+    flex-wrap	Items의 여러 줄 묶음(줄 바꿈) nowrap 설정
+ -->
+
+<body>
+  <h2>flex-direction</h2>
+
+  <p>row</p>
+  <div class="container row">
+    <div class="item"></div><div class="item"></div><div class="item"></div>
+  </div>
+
+  <p>row-reverse</p>
+  <div class="container row-reverse">
+    <div class="item"></div><div class="item"></div><div class="item"></div>
+  </div>
+
+  <p>column</p>
+  <div class="container column">
+    <div class="item"></div><div class="item"></div><div class="item"></div>
+  </div>
+
+  <p>column-reverse</p>
+  <div class="container column-reverse">
+    <div class="item"></div><div class="item"></div><div class="item"></div>
+  </div>
+</body>
+
+<style>
+  /* 기본 속성 */
+  div {
+    background-color: rgb(200, 200, 200); 
+    border: 1px dotted rgb(48, 48, 48); 
+    margin: 2px;
+  }
+  
+  .container { display: flex; width: 300px; }
+  .item { width: 50px; height: 50px; background-color: yellow; }
+
+  /* flex-direction 속성 */
+  .container.row { flex-direction: row; height: 100px; }
+  .container.row-reverse { flex-direction: row-reverse; height: 100px; }
+  .container.column { flex-direction: column; height: 200px; }
+  .container.column-reverse { flex-direction: column-reverse; height: 200px; }
+</style>
